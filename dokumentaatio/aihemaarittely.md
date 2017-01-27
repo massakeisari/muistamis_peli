@@ -3,3 +3,5 @@
 **Käyttäjät:** Kuka tahansa
 
 **Toiminnot** 
+
+![kaavio](muistipeli.png)
