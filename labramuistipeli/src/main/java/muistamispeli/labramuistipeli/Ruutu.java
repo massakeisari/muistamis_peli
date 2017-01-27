@@ -16,4 +16,8 @@ public class Ruutu {
         this.numero = numero;
     }
     
+    public int getNumero() {
+    	return this.numero;
+    }
+    
 }
