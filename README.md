@@ -1,2 +1,7 @@
 # muistamis_peli
-# testaus
+
+## Dokumentaatio
+
+[aiheen kuvaus](dokumentaatio/aihemaarittely.md)
+
+[tunnit](dokumentaatio/tuntikirjanptio.md)
