@@ -11,13 +11,13 @@ package muistamispeli.labramuistipeli;
  */
 public class Ruutu {
     private int numero;
-    
+
     public Ruutu(int numero) {
         this.numero = numero;
     }
-    
+
     public int getNumero() {
     	return this.numero;
     }
-    
+
 }

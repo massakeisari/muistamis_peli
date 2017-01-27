@@ -8,7 +8,6 @@ public class RuutuTest {
 
 	@Test
 	public void test() {
-		
-	}
 
+	}
 }

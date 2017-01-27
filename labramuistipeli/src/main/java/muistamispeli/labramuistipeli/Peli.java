@@ -14,26 +14,23 @@ import java.util.List;
  */
 public class Peli {
     private List<Ruutu> ruudut;
-    
+
     public Peli() {
         this.ruudut = new ArrayList<>();
     }
-    
+
     public void luoRuudut(int montako) {
         int apu = 0;
-        while(apu < montako) {
-            for(int i = 0; i<2; i++) {
+        while (apu < montako) {
+            for (int i = 0; i < 2; i++) {
                 Ruutu r = new Ruutu(apu);
                 ruudut.add(r);
             }
             apu++;
         }
     }
-    
+
     public int getRuutujenMaara() {
         return this.ruudut.size();
     }
-    
-    
-    
 }
