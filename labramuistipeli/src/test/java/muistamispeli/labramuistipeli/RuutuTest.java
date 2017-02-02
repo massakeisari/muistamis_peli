@@ -18,17 +18,16 @@ public class RuutuTest {
     public void testaaRuudunNumero() {
         assertEquals(10, r.getNumero());
     }
-    
+
     @Test
     public void aluksiKiinni() {
         assertEquals(false, r.onkoAuki());
     }
-    
+
     @Test
     public void ruutuAuki() {
         r.avaa();
         assertEquals(true, r.onkoAuki());
     }
-    
-    
+
 }

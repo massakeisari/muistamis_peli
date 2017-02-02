@@ -3,7 +3,6 @@ package muistamispeli.labramuistipeli;
 import java.util.Scanner;
 import muistamispeli.labramuistipeli.tekstikayttoliittyma.Tekstikayttoliittyma;
 
-
 public class Main {
 
     public static void main(String[] args) {
