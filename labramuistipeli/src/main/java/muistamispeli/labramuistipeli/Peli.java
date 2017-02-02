@@ -8,10 +8,7 @@ package muistamispeli.labramuistipeli;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author mikko
- */
+
 public class Peli {
     private List<Ruutu> ruudut;
 
