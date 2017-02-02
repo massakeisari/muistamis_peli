@@ -4,4 +4,4 @@
 
 [aiheen kuvaus](dokumentaatio/aihemaarittely.md)
 
-[tunnit](dokumentaatio/tuntikirjanptio.md)
+[tunnit](dokumentaatio/tuntikirjanpito.md)
