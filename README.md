@@ -8,3 +8,7 @@ Muistipeli.
 [aiheen kuvaus](dokumentaatio/aihemaarittely.md)
 
 [tunnit](dokumentaatio/tuntikirjanpito.md)
+
+[pit-raportti](https://htmlpreview.github.io/?https://github.com/massakeisari/muistamis_peli/tree/master/dokumentaatio/pit/201702032013/index.html)
+
+[checkstyle-tulos](https://htmlpreview.github.io/?https://github.com/massakeisari/muistamis_peli/tree/master/dokumentaatio/checkstyle-result.xml)
