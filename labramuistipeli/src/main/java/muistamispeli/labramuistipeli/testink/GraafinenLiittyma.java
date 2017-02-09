@@ -1,6 +1,5 @@
-package muistamispeli.labramuistipeli.GUI;
+package muistamispeli.labramuistipeli.testink;
 
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import javax.swing.JButton;
