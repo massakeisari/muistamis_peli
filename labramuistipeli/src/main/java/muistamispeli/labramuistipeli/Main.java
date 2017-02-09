@@ -1,18 +1,23 @@
 package muistamispeli.labramuistipeli;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import muistamispeli.labramuistipeli.GUI.GraafinenLiittyma;
 import muistamispeli.labramuistipeli.tekstikayttoliittyma.Tekstikayttoliittyma;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(" test");
+        ArrayList<Ruutu> ruudut = new ArrayList<>();
 
         Scanner lukija = new Scanner(System.in);
-        Peli p = new Peli();
+        Peli p = new Peli(ruudut);
         Tekstikayttoliittyma tk = new Tekstikayttoliittyma(p, lukija);
 
         tk.kaynnista();
+        
+        GraafinenLiittyma gl = new GraafinenLiittyma(ruudut);
+        gl.luoIkkuna();
 
     }
 }

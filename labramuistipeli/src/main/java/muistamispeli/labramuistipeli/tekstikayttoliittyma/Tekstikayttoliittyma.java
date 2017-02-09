@@ -22,9 +22,9 @@ public class Tekstikayttoliittyma {
     }
 
     public void kaynnista() {
-        System.out.println("Montako ruutua?");
-        int ruutujenMaara = Integer.parseInt(lukija.nextLine());
-        p.luoRuudut(ruutujenMaara);
+        System.out.print("Montako ruutua?\n>");
+        int ruudut = Integer.parseInt(lukija.nextLine());
+        p.luoRuudut(ruudut/2);
 
         System.out.println(p.getRuutujenMaara());
     }

@@ -7,8 +7,8 @@ public class Peli {
 
     private List<Ruutu> ruudut;
 
-    public Peli() {
-        this.ruudut = new ArrayList<>();
+    public Peli(ArrayList<Ruutu> ruudut) {
+        this.ruudut = ruudut;
     }
 
     public void luoRuudut(int montako) {
