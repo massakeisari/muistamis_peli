@@ -5,3 +5,4 @@ Päivä | Tunnit | Kuvaus
 26.01.2017 | ~3-4h | typerän mavenin ja netbeansin errorien ja vittuilun syyn etsimistä
 27.01.2017 | ~2h | netbeansin vaihto eclipseen, junit testejä
 02.02.2017 | ~2h | Gitin testailua Windowsilla, testien kansiorakenne korjattu, uusia luokkia, lisää toimintoja, luokkakaavion tapaista
+09.02.2017 | ~3h | GUI:n aloittamista, Windowsin isojen ja pienien kirjainten erottamiskyvyttömyyden takia sähläämistä kansioiden kanssa
