@@ -15,7 +15,7 @@ public class Main {
         Tekstikayttoliittyma tk = new Tekstikayttoliittyma(p, lukija);
 
         tk.kaynnista();
-        
+
         GraafinenLiittyma gl = new GraafinenLiittyma(ruudut);
         gl.luoIkkuna();
 

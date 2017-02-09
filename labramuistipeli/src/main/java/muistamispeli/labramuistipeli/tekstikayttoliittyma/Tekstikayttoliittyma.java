@@ -13,6 +13,7 @@ import muistamispeli.labramuistipeli.Peli;
  * @author mikko
  */
 public class Tekstikayttoliittyma {
+
     private Peli p;
     private Scanner lukija;
 
@@ -24,7 +25,7 @@ public class Tekstikayttoliittyma {
     public void kaynnista() {
         System.out.print("Montako ruutua?\n>");
         int ruudut = Integer.parseInt(lukija.nextLine());
-        p.luoRuudut(ruudut/2);
+        p.luoRuudut(ruudut / 2);
 
         System.out.println(p.getRuutujenMaara());
     }
