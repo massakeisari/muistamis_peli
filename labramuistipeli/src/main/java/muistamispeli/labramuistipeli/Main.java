@@ -2,7 +2,7 @@ package muistamispeli.labramuistipeli;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import muistamispeli.labramuistipeli.GUI.GraafinenLiittyma;
+import muistamispeli.labramuistipeli.gui.GraafinenLiittyma;
 import muistamispeli.labramuistipeli.tekstikayttoliittyma.Tekstikayttoliittyma;
 
 public class Main {
