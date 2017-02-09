@@ -1,4 +1,4 @@
-package muistamispeli.labramuistipeli.testink;
+package muistamispeli.labramuistipeli.gui;
 
 import java.awt.GridLayout;
 import java.util.ArrayList;
