@@ -19,6 +19,9 @@ public class GraafinenLiittyma {
         this.ruudut = ruudut;
     }
 
+    /**
+     * Metodi luo ja näyttää ikkunan, johon pelin graafinen sisältö laitetaan
+     */
     public void luoIkkuna() {
         JFrame ikkuna = new JFrame("Muistipeli");
         ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +37,12 @@ public class GraafinenLiittyma {
 
     }
 
+    /**
+     * Metodi lisää ikkunaan napit
+     * @param ikkuna 
+     * @param sisalto Paneeli, joka on ikkunan sisällä, ja jonka sisälle
+     * napit luodaan.
+     */
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
         while (apu < ruudut.size()) {

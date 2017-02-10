@@ -11,6 +11,10 @@ public class Peli {
         this.ruudut = ruudut;
     }
 
+    /**
+     * Metodi luo peliin ruudut
+     * @param montako Luotavien ruutujen määrä
+     */
     public void luoRuudut(int montako) {
         int apu = 0;
         while (apu < montako) {
