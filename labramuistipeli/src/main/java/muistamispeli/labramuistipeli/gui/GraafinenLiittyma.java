@@ -1,6 +1,8 @@
 package muistamispeli.labramuistipeli.gui;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -45,13 +47,20 @@ public class GraafinenLiittyma {
      */
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
+        Kuuntelija al = new Kuuntelija(ruudut);
         while (apu < ruudut.size()) {
-            JButton nappi = new JButton(Integer.toString(apu));
+            JButton nappi = new JButton("X");
+            nappi.setActionCommand(Integer.toString(apu));
+            nappi.addActionListener(al);
             sisalto.add(nappi);
-            JButton nappi2 = new JButton(Integer.toString(apu));
+            JButton nappi2 = new JButton("X");
+            nappi2.setActionCommand(Integer.toString(apu));
+            nappi2.addActionListener(al);
             sisalto.add(nappi2);
             apu++;
         }
     }
+    
+    
 
 }
