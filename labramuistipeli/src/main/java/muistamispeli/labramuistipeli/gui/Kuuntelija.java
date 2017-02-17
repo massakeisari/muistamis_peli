@@ -37,27 +37,27 @@ public class Kuuntelija implements ActionListener {
             this.nappi2 = (JButton) e.getSource();
             nappi2.setText(e.getActionCommand());
         }
-        if (!n.isEmpty()) {
-            if (n.equals(e.getActionCommand())) {
-                avaaRuudut(n);
-            }
-        }
+        //if (!n.isEmpty()) {
+        //    if (n.equals(e.getActionCommand())) {
+        //        avaaRuudut(n);
+        //    }
+        //}
         n = e.getActionCommand();
-        if (nappi1 != null && nappi2 != null) {
+        if (nappi1 != null && nappi2 != null && avattujaRuutuja >= 2) {
             this.avattujaRuutuja = 0;
             n = "";
             if (!nappi1.getText().equals(nappi2.getText())) {
                 nappi1.setText("X");
                 nappi2.setText("X");
-                this.nappi1 = null;
-                this.nappi2 = null;
             }
+            this.nappi1 = null;
+            this.nappi2 = null;
         }
     }
 
-    public void avaaRuudut(String n) {
-        ruudut.get(Integer.parseInt(n) * 2).avaa();
-        ruudut.get(Integer.parseInt(n) + (Integer.parseInt(n) + 1)).avaa();
-    }
+    //public void avaaRuudut(String n) {
+    //    ruudut.get(Integer.parseInt(n) * 2).avaa();
+    //    ruudut.get(Integer.parseInt(n) + (Integer.parseInt(n) + 1)).avaa();
+    //}
 
 }
