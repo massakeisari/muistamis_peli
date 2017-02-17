@@ -16,37 +16,48 @@ public class Kuuntelija implements ActionListener {
     private String n;
     private ArrayList<Ruutu> ruudut;
     private int avattujaRuutuja;
+    private JButton nappi1;
+    private JButton nappi2;
 
     public Kuuntelija(ArrayList<Ruutu> ruudut) {
         this.n = "";
         this.ruudut = ruudut;
         this.avattujaRuutuja = 0;
+        this.nappi1 = null;
+        this.nappi2 = null;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         avattujaRuutuja++;
-        JButton olio = (JButton) e.getSource();
-        olio.setText(e.getActionCommand());
-
+        if (nappi1 == null) {
+            this.nappi1 = (JButton) e.getSource();
+            nappi1.setText(e.getActionCommand());
+        } else {
+            this.nappi2 = (JButton) e.getSource();
+            nappi2.setText(e.getActionCommand());
+        }
         if (!n.isEmpty()) {
             if (n.equals(e.getActionCommand())) {
                 avaaRuudut(n);
             }
         }
         n = e.getActionCommand();
-        if (this.avattujaRuutuja >= 2) {
+        if (nappi1 != null && nappi2 != null) {
             this.avattujaRuutuja = 0;
             n = "";
-            if (!ruudut.get(Integer.parseInt(e.getActionCommand())*2).onkoAuki()) {
-                olio.setText("X");
+            if (!nappi1.getText().equals(nappi2.getText())) {
+                nappi1.setText("X");
+                nappi2.setText("X");
+                this.nappi1 = null;
+                this.nappi2 = null;
             }
         }
     }
 
     public void avaaRuudut(String n) {
-        ruudut.get(Integer.parseInt(n)*2).avaa();
-        ruudut.get(Integer.parseInt(n) + (Integer.parseInt(n) +1)).avaa();
+        ruudut.get(Integer.parseInt(n) * 2).avaa();
+        ruudut.get(Integer.parseInt(n) + (Integer.parseInt(n) + 1)).avaa();
     }
 
 }
