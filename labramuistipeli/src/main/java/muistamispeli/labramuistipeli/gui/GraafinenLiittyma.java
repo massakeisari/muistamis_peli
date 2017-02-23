@@ -11,13 +11,9 @@ import muistamispeli.labramuistipeli.Ruutu;
 
 public class GraafinenLiittyma {
 
-    private int x;
-    private int y;
     private ArrayList<Ruutu> ruudut;
 
     public GraafinenLiittyma(ArrayList<Ruutu> ruudut) {
-        this.x = x;
-        this.y = y;
         this.ruudut = ruudut;
     }
 
@@ -41,9 +37,10 @@ public class GraafinenLiittyma {
 
     /**
      * Metodi lisää ikkunaan napit
-     * @param ikkuna 
-     * @param sisalto Paneeli, joka on ikkunan sisällä, ja jonka sisälle
-     * napit luodaan.
+     *
+     * @param ikkuna
+     * @param sisalto Paneeli, joka on ikkunan sisällä, ja jonka sisälle napit
+     * luodaan.
      */
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
@@ -60,7 +57,5 @@ public class GraafinenLiittyma {
             apu++;
         }
     }
-    
-    
 
 }
