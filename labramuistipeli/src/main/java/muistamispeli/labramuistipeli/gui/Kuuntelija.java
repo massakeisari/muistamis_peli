@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import muistamispeli.labramuistipeli.Ruutu;
 import muistamispeli.labramuistipeli.Tarkastaja;
 
@@ -21,18 +23,22 @@ public class Kuuntelija implements ActionListener {
     private JButton nappi2;
     private Tarkastaja tarkastaja;
     private GraafinenLiittyma gl;
+    private JFrame ikkuna;
 
-    public Kuuntelija(ArrayList<Ruutu> ruudut) {
+    public Kuuntelija(ArrayList<Ruutu> ruudut, JFrame ikkuna) {
         this.n = "";
         this.ruudut = ruudut;
         this.avattujaRuutuja = 0;
         this.nappi1 = null;
         this.nappi2 = null;
         this.tarkastaja = new Tarkastaja(ruudut);
+        this.ikkuna = ikkuna;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    	Muokkaaja mk = new Muokkaaja(this.ikkuna);
+    	mk.naytaLopetusIkkuna();
         avattujaRuutuja++;
         if (nappi1 == null) {
             this.nappi1 = (JButton) e.getSource();

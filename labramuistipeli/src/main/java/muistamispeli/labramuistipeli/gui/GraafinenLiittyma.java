@@ -44,7 +44,7 @@ public class GraafinenLiittyma {
      */
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
-        Kuuntelija al = new Kuuntelija(ruudut);
+        Kuuntelija al = new Kuuntelija(ruudut, ikkuna);
         while (apu < ruudut.size()) {
             JButton nappi = new JButton("X");
             nappi.setActionCommand(Integer.toString(apu));
