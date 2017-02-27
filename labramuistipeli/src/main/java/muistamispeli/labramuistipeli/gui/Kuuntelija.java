@@ -38,8 +38,6 @@ public class Kuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-    	CardLayout cl = (CardLayout) this.ikkuna.getContentPane().getLayout();
-        cl.show(ikkuna.getContentPane(), "loppu");
         avattujaRuutuja++;
         if (nappi1 == null) {
             this.nappi1 = (JButton) e.getSource();
@@ -58,6 +56,7 @@ public class Kuuntelija implements ActionListener {
                 nappi2.setText("X");
             } else {
                 avaaRuudut();
+                tarkasta();
             }
             n = "";
             this.nappi1 = null;
@@ -70,6 +69,14 @@ public class Kuuntelija implements ActionListener {
             if (Integer.toString(r.getNumero()).equals(n)) {
                 r.avaa();
             }
+        }
+    }
+
+    public void tarkasta() {
+        Tarkastaja tk = new Tarkastaja(this.ruudut);
+        if (tk.tarkasta()) {
+            CardLayout cl = (CardLayout) this.ikkuna.getContentPane().getLayout();
+            cl.show(ikkuna.getContentPane(), "loppu");
         }
     }
 }

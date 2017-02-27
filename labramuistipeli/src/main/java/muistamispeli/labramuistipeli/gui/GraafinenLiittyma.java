@@ -26,6 +26,7 @@ public class GraafinenLiittyma {
         ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel loppu = new JPanel(new GridLayout(6, 6));
+        
         JButton ok = new JButton("Lopeta");
         loppu.add(ok);
 
