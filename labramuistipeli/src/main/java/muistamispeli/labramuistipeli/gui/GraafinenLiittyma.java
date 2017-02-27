@@ -1,5 +1,6 @@
 package muistamispeli.labramuistipeli.gui;
 
+import java.awt.CardLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,11 +25,19 @@ public class GraafinenLiittyma {
         JFrame ikkuna = new JFrame("Muistipeli");
         ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        JPanel loppu = new JPanel(new GridLayout(6, 6));
+        JButton ok = new JButton("Lopeta");
+        loppu.add(ok);
+
         JPanel sisaltoPaneeli = new JPanel(new GridLayout(6, 6));
 
         //Lisää napit tässä
         lisaaNapit(ikkuna, sisaltoPaneeli);
-        ikkuna.setContentPane(sisaltoPaneeli);
+
+        JPanel cardPanel = new JPanel(new CardLayout());
+        cardPanel.add(sisaltoPaneeli, "peli");
+        cardPanel.add(loppu, "loppu");
+        ikkuna.setContentPane(cardPanel);
 
         ikkuna.pack();
         ikkuna.setVisible(true);

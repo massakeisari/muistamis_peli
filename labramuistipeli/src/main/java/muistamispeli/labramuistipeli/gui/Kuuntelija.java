@@ -5,6 +5,7 @@
  */
 package muistamispeli.labramuistipeli.gui;
 
+import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -37,8 +38,8 @@ public class Kuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-    	Muokkaaja mk = new Muokkaaja(this.ikkuna);
-    	mk.naytaLopetusIkkuna();
+    	CardLayout cl = (CardLayout) this.ikkuna.getContentPane().getLayout();
+        cl.show(ikkuna.getContentPane(), "loppu");
         avattujaRuutuja++;
         if (nappi1 == null) {
             this.nappi1 = (JButton) e.getSource();
