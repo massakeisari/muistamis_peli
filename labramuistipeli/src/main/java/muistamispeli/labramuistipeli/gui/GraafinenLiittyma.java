@@ -5,6 +5,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -55,16 +56,21 @@ public class GraafinenLiittyma {
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
         Kuuntelija al = new Kuuntelija(ruudut, ikkuna);
+        ArrayList<JButton> napit = new ArrayList<>();
         while (apu < ruudut.size()) {
             JButton nappi = new JButton("X");
             nappi.setActionCommand(Integer.toString(apu));
             nappi.addActionListener(al);
-            sisalto.add(nappi);
+            napit.add(nappi);
             JButton nappi2 = new JButton("X");
             nappi2.setActionCommand(Integer.toString(apu));
             nappi2.addActionListener(al);
-            sisalto.add(nappi2);
+            napit.add(nappi2);
             apu++;
+        }
+        Collections.shuffle(napit);
+        for(JButton jb : napit) {
+            sisalto.add(jb);
         }
     }
 
