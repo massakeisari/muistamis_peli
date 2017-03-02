@@ -26,6 +26,7 @@ public class Kuuntelija implements ActionListener {
     private Tarkastaja tarkastaja;
     private GraafinenLiittyma gl;
     private JFrame ikkuna;
+    private boolean sulje;
 
     public Kuuntelija(ArrayList<Ruutu> ruudut, JFrame ikkuna) {
         this.n = "";
@@ -35,11 +36,18 @@ public class Kuuntelija implements ActionListener {
         this.nappi2 = null;
         this.tarkastaja = new Tarkastaja(ruudut);
         this.ikkuna = ikkuna;
+        this.sulje = false;
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        avattujaRuutuja++;
+        if(this.sulje) {
+            suljeNapit();
+            this.sulje = false;
+            this.nappi1 = null;
+            this.nappi2 = null;
+        }
         if (nappi1 == null) {
             this.nappi1 = (JButton) e.getSource();
             nappi1.setText(e.getActionCommand());
@@ -47,19 +55,25 @@ public class Kuuntelija implements ActionListener {
             this.nappi2 = (JButton) e.getSource();
             nappi2.setText(e.getActionCommand());
         }
-
+            
+        
+        avattujaRuutuja++;
         n = e.getActionCommand();
         if (nappi1 != null && nappi2 != null && avattujaRuutuja >= 2) {
             this.avattujaRuutuja = 0;
 
             if (!nappi1.getText().equals(nappi2.getText())) {
-                nappi1.setText("X");
-                nappi2.setText("X");
+                this.sulje = true;
             } else {
                 avaaRuudut();
                 tarkasta();
             }
             n = "";
+            
+        }
+        
+        
+        if(nappi1 != null && nappi2 != null && this.sulje == false) {
             this.nappi1 = null;
             this.nappi2 = null;
         }
@@ -71,6 +85,11 @@ public class Kuuntelija implements ActionListener {
                 r.avaa();
             }
         }
+    }
+    
+    public void suljeNapit() {
+        nappi1.setText("X");
+        nappi2.setText("X");
     }
 
     public void tarkasta() {
