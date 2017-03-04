@@ -2,8 +2,6 @@ package muistamispeli.labramuistipeli.gui;
 
 import java.awt.CardLayout;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.JButton;
@@ -13,7 +11,7 @@ import muistamispeli.labramuistipeli.Ruutu;
 
 public class GraafinenLiittyma {
 
-    private ArrayList<Ruutu> ruudut;
+    private final ArrayList<Ruutu> ruudut;
 
     public GraafinenLiittyma(ArrayList<Ruutu> ruudut) {
         this.ruudut = ruudut;
@@ -27,7 +25,7 @@ public class GraafinenLiittyma {
         ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel loppu = new JPanel(new GridLayout(6, 6));
-        
+
         JButton ok = new JButton("Lopeta");
         loppu.add(ok);
 
@@ -55,21 +53,22 @@ public class GraafinenLiittyma {
      */
     public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
         int apu = 0;
-        Kuuntelija al = new Kuuntelija(ruudut, ikkuna);
-        ArrayList<JButton> napit = new ArrayList<>();
-        while (apu < ruudut.size()) {
-            JButton nappi = new JButton("X");
+        ArrayList<Ruutu> napit = new ArrayList<>();
+        Kuuntelija al = new Kuuntelija(napit, ikkuna);
+
+        while (apu < 10) {
+            Ruutu nappi = new Ruutu(apu, 1);
             nappi.setActionCommand(Integer.toString(apu));
             nappi.addActionListener(al);
             napit.add(nappi);
-            JButton nappi2 = new JButton("X");
+            Ruutu nappi2 = new Ruutu(apu, 2);
             nappi2.setActionCommand(Integer.toString(apu));
             nappi2.addActionListener(al);
             napit.add(nappi2);
             apu++;
         }
         Collections.shuffle(napit);
-        for(JButton jb : napit) {
+        for (JButton jb : napit) {
             sisalto.add(jb);
         }
     }

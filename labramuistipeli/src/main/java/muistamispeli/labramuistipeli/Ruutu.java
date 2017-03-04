@@ -1,13 +1,18 @@
 package muistamispeli.labramuistipeli;
 
-public class Ruutu {
+import javax.swing.JButton;
+
+public class Ruutu extends JButton {
 
     private final int numero;
     private boolean auki;
+    private final int tunnus;
 
-    public Ruutu(int numero) {
+    public Ruutu(int numero, int tunnus) {
+        super("X");
         this.numero = numero;
         this.auki = false;
+        this.tunnus = tunnus;
     }
 
     public void avaa() {
@@ -24,6 +29,10 @@ public class Ruutu {
 
     public int getNumero() {
         return this.numero;
+    }
+
+    public int getTunnus() {
+        return this.tunnus;
     }
 
 }
