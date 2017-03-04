@@ -47,11 +47,9 @@ public class Kuuntelija implements ActionListener {
         if (nappi1 == null) {
             this.nappi1 = (Ruutu) e.getSource();
             nappi1.setText(e.getActionCommand());
-            nappi1.avaa();
         } else {
             this.nappi2 = (Ruutu) e.getSource();
             nappi2.setText(e.getActionCommand());
-            nappi2.avaa();
         }
 
         avattujaRuutuja++;
@@ -66,9 +64,14 @@ public class Kuuntelija implements ActionListener {
                 tarkasta();
             }
             n = "";
-
         }
+        tyhjennaNapit();
+    }
 
+    /**
+     * Tyhjentää nappi -muuttujat seuraavaa paria varten
+     */
+    public void tyhjennaNapit() {
         if (nappi1 != null && nappi2 != null && this.sulje == false) {
             this.nappi1 = null;
             this.nappi2 = null;
@@ -76,20 +79,27 @@ public class Kuuntelija implements ActionListener {
     }
 
     public void avaaRuudut() {
-        for (Ruutu r : this.ruudut) {
-            if (Integer.toString(r.getNumero()).equals(n)) {
-                r.avaa();
-            }
+        nappi1.avaa();
+        nappi2.avaa();
+    }
+
+    /**
+     * Sulkee napit, jos niille ei ole löytynyt paria.
+     */
+    public void suljeNapit() {
+        if (!nappi1.onkoAuki()) {
+            nappi1.setText("X");
+            nappi1.sulje();
+        }
+        if (!nappi2.onkoAuki()) {
+            nappi2.setText("X");
+            nappi2.sulje();
         }
     }
 
-    public void suljeNapit() {
-        nappi1.setText("X");
-        nappi2.setText("X");
-        nappi1.sulje();
-        nappi2.sulje();
-    }
-
+    /**
+     * Tarkastaa, onko kaikki parit löydetty, ja lopettaa pelin jos on.
+     */
     public void tarkasta() {
         Tarkastaja tk = new Tarkastaja(this.ruudut);
         if (tk.tarkasta()) {

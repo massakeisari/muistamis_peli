@@ -2,6 +2,11 @@ package muistamispeli.labramuistipeli;
 
 import javax.swing.JButton;
 
+/*
+Ruutu -luokka jatkaa JButtonia, jotta ohjelma voi helposti löytää pelin ruudun
+ja napin tiedot samasta oliosta.
+*/
+
 public class Ruutu extends JButton {
 
     private final int numero;

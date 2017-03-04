@@ -10,6 +10,10 @@ public class Tarkastaja {
         this.ruudut = ruudut;
     }
 
+    /**
+     * Käy ruudut -listan läpi ja ilmoittaa onko listan kaikki ruudut auki vai ei.
+     * @return palauttaa true tai false, onko kaikki auki/ei.
+     */
     public boolean tarkasta() {
         int aukinaiset = 0;
         for (Ruutu r : this.ruudut) {
