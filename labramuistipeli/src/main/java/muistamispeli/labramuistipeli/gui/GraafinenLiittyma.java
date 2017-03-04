@@ -11,11 +11,9 @@ import muistamispeli.labramuistipeli.Ruutu;
 
 public class GraafinenLiittyma {
 
-    private final ArrayList<Ruutu> ruudut;
     private JFrame ikkuna;
 
-    public GraafinenLiittyma(ArrayList<Ruutu> ruudut) {
-        this.ruudut = ruudut;
+    public GraafinenLiittyma() {
         this.ikkuna = new JFrame("Muistipeli");
     }
 
