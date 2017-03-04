@@ -10,6 +10,5 @@ public class Main {
 
         GraafinenLiittyma gl = new GraafinenLiittyma(ruudut);
         gl.luoIkkuna();
-
     }
 }

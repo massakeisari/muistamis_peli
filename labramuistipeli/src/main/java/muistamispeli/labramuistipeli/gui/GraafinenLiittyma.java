@@ -12,27 +12,30 @@ import muistamispeli.labramuistipeli.Ruutu;
 public class GraafinenLiittyma {
 
     private final ArrayList<Ruutu> ruudut;
+    private JFrame ikkuna;
 
     public GraafinenLiittyma(ArrayList<Ruutu> ruudut) {
         this.ruudut = ruudut;
+        this.ikkuna = new JFrame("Muistipeli");
     }
 
     /**
      * Metodi luo ja näyttää ikkunan, johon pelin graafinen sisältö laitetaan
      */
     public void luoIkkuna() {
-        JFrame ikkuna = new JFrame("Muistipeli");
+        ikkuna.getContentPane().removeAll();
         ikkuna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel loppu = new JPanel(new GridLayout(6, 6));
 
-        JButton ok = new JButton("Lopeta");
+        JButton ok = new JButton("Aloita uusi peli");
+        ok.addActionListener(new RestartKuuntelija(this));
         loppu.add(ok);
 
         JPanel sisaltoPaneeli = new JPanel(new GridLayout(6, 6));
 
         //Lisää napit tässä
-        lisaaNapit(ikkuna, sisaltoPaneeli);
+        lisaaNapit(sisaltoPaneeli);
 
         JPanel cardPanel = new JPanel(new CardLayout());
         cardPanel.add(sisaltoPaneeli, "peli");
@@ -51,7 +54,7 @@ public class GraafinenLiittyma {
      * @param sisalto Paneeli, joka on ikkunan sisällä, ja jonka sisälle napit
      * luodaan.
      */
-    public void lisaaNapit(JFrame ikkuna, JPanel sisalto) {
+    public void lisaaNapit(JPanel sisalto) {
         int apu = 0;
         ArrayList<Ruutu> napit = new ArrayList<>();
         Kuuntelija al = new Kuuntelija(napit, ikkuna);
