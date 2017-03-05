@@ -13,4 +13,4 @@ Muistipeli.
 
 [checkstyle-tulos](https://htmlpreview.github.io/?https://github.com/massakeisari/muistamis_peli/blob/master/dokumentaatio/checkstyle.html)
 
-[käyttöohjeet](dokumentaatio/käyttöohjeet.md)
+[käyttöohjeet](dokumentaatio/kayttoohjeet.md)
