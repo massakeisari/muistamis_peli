@@ -48,7 +48,6 @@ public class GraafinenLiittyma {
     /**
      * Metodi lisää ikkunaan napit
      *
-     * @param ikkuna
      * @param sisalto Paneeli, joka on ikkunan sisällä, ja jonka sisälle napit
      * luodaan.
      */

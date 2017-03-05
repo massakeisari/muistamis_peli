@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package muistamispeli.labramuistipeli.gui;
 
 import java.awt.CardLayout;
@@ -16,7 +11,6 @@ import muistamispeli.labramuistipeli.Tarkastaja;
 
 public class Kuuntelija implements ActionListener {
 
-    private String n;
     private final ArrayList<Ruutu> ruudut;
     private int avattujaRuutuja;
     private Ruutu nappi1;
@@ -26,7 +20,6 @@ public class Kuuntelija implements ActionListener {
     private boolean sulje;
 
     public Kuuntelija(ArrayList<Ruutu> ruudut, JFrame ikkuna) {
-        this.n = "";
         this.ruudut = ruudut;
         this.avattujaRuutuja = 0;
         this.nappi1 = null;
@@ -53,7 +46,6 @@ public class Kuuntelija implements ActionListener {
         }
 
         avattujaRuutuja++;
-        n = e.getActionCommand();
         if (nappi1 != null && nappi2 != null && avattujaRuutuja >= 2) {
             this.avattujaRuutuja = 0;
 
@@ -63,7 +55,6 @@ public class Kuuntelija implements ActionListener {
                 avaaRuudut();
                 tarkasta();
             }
-            n = "";
         }
         tyhjennaNapit();
     }
@@ -78,6 +69,10 @@ public class Kuuntelija implements ActionListener {
         }
     }
 
+    /**
+     * Avaa nappi -muuttujissa olevat ruudut, jotta tiedetään että niillä on
+     * löydetty pari
+     */
     public void avaaRuudut() {
         nappi1.avaa();
         nappi2.avaa();
