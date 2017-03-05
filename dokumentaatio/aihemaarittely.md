@@ -25,3 +25,4 @@ Loppuikkunan napilla on oma kuuntelija, "RestartKuuntelija" -luokan ilmentymä, 
 
 
 ![sekvenssikaavio2](sekvenssi2.png)
+Käyttäjä avaa viimeiset ruudut, ja sen jälkeen painaa restart nappia.
