@@ -11,7 +11,7 @@ Nappeja painamalla saa näkyviin numeron, vain 2 erilaista paritonta nappia voi 
 Pelissä on kuusi luokkaa: Main, GraafinenLiittyma, Ruutu, Tarkastaja, Kuuntelija ja RestartKuuntelija, joista "Main" luokka käytännössä vain käynnistää pelin luomalla "GraaninenLiittymä" -luokasta olion ja kutsumalla sen "luoIkkuna()" -metodia.
 
 "GraafinenLiittymä" -luokka koostuu kahdesta metodista: "luoIkkuna()", ja "lisaaNapit(JPanel sisalto)". Pelin pääikkuna JFrame alustetaan "private JFrame ikkuna" -muuttujaan heti kun luokasta luodaan olio.
-"luoIkkuna()" luo nimensä mukaisesti pelin näkyvät ikkunat, eli peli-ikkunan ja pelin päätyttyä loppu-ikkunan ja loppu-ikkunaan restart napin metodi myös kutsuu luokan toista metodia "lisaaNapit()".
+"luoIkkuna()" luo nimensä mukaisesti pelin näkyvät ikkunat, eli peli-ikkunan ja pelin päätyttyä näytettävän loppu-ikkunan, ja loppu-ikkunaan restart napin. Metodi myös kutsuu luokan toista metodia "lisaaNapit()".
 "lisaaNapit()" lisaa ikkunaan "Ruutu" -luokan olioita, jotka toimivat muistipelin kortteina. Luokka jatkaa JButtonia, jolloin nappia painettaessa kaikki tarvittava tieto ruudusta löytyy samasta paikasta actionListenerillä.
 
 Jokaiselle "Ruutu" -oliolle lisätään actionListener joka on luokan "Kuuntelija" -ilmentymä.
