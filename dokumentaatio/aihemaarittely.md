@@ -20,3 +20,8 @@ Loppuikkunan napilla on oma kuuntelija, "RestartKuuntelija" -luokan ilmentymä, 
 "Kuuntelija" -luokka toimii actionListenerinä, ja sille jäi ehkä liikaa tehtäviä, jotka olisi voinut siirtää toiseen luokkaan. Luokka kuuntelee muistipelin ruutuja, ja vertailee avattuja ruutuja ja "avaa" ne, jos ne ovat pari.
 
 "Tarkastaja" -luokassa on yksi metodi "tarkasta()", joka käy läpi kaikki pelin "Ruutu" -oliot ja kutsuu jokaisen "onkoAuki()" -metodia, ja laskee onko aukinaisia ruutuja yhtä paljon kuin ruutuja yhteensä, ja palauttaa sen mukaan true tai false.
+
+![sekvenssikaavio1](sekvenssi1.png)
+
+
+![sekvenssikaavio2](sekvenssi2.png)
