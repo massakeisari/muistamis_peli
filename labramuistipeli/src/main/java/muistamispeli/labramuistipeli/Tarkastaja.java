@@ -11,11 +11,13 @@ public class Tarkastaja {
     }
 
     /**
-     * Käy ruudut -listan läpi ja ilmoittaa onko listan kaikki ruudut auki vai ei.
+     * Käy ruudut -listan läpi ja ilmoittaa onko listan kaikki ruudut auki vai
+     * ei.
+     *
      * @return palauttaa true tai false, onko kaikki auki/ei.
      */
     public boolean tarkasta() {
-        if(this.ruudut.isEmpty()) {
+        if (this.ruudut.isEmpty()) {
             return false;
         }
         int aukinaiset = 0;

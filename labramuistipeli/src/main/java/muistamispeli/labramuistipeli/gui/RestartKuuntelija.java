@@ -8,13 +8,14 @@ import java.awt.event.ActionListener;
  * GraafinenLiittyma -luokan luoIkkuna -metodia, jolloin piirretään uusi peli
  * uusilla ruuduilla.
  */
-public class RestartKuuntelija implements ActionListener{
+public class RestartKuuntelija implements ActionListener {
+
     private GraafinenLiittyma gl;
-    
+
     public RestartKuuntelija(GraafinenLiittyma gl) {
         this.gl = gl;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         gl.luoIkkuna();
