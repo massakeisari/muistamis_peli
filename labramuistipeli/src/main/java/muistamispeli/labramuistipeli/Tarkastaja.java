@@ -15,6 +15,9 @@ public class Tarkastaja {
      * @return palauttaa true tai false, onko kaikki auki/ei.
      */
     public boolean tarkasta() {
+        if(this.ruudut.isEmpty()) {
+            return false;
+        }
         int aukinaiset = 0;
         for (Ruutu r : this.ruudut) {
             if (r.onkoAuki()) {
