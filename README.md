@@ -1,7 +1,7 @@
 # muistamis_peli
 
 ## Kuvaus
-Muistipeli.
+Muistipeli, toteutettu Javalla ja Swingillä.
 
 ## Dokumentaatio
 
